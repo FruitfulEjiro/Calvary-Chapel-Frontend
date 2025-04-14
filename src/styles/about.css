@@ -1,0 +1,375 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;500;600;700;800&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  list-style: none;
+  text-decoration: none;
+  background: none;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.header {
+  height: 3rem;
+  box-shadow: 0 0 1px #000;
+}
+
+.hamburger {
+  font-size: 1.3rem;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 70%;
+  height: 100vh;
+  background: #e8f2ff;
+  transform: translateX(-100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-items {
+  padding: 0.3rem;
+}
+
+.nav-svg {
+  margin: 0rem 1rem 0rem 0rem;
+  position: relative;
+  bottom: 0.1rem;
+}
+
+.x-mark {
+  left: 9.5rem;
+  top: 1rem;
+  font-size: 1.3rem;
+}
+
+.about-hero {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+}
+
+.about-hero-img {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 47, 97, 0.7490196078);
+}
+
+.about-hero-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.about-hero-text {
+  font-weight: 900 !important;
+  color: black;
+}
+
+.about-nav {
+  width: 100%;
+}
+
+.nav-container {
+  width: 45rem;
+}
+
+.statement {
+  width: 14rem;
+  font-size: 0.9rem;
+  background: #e8f2ff;
+  padding: 0.8rem 1rem 0.8rem 1rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2588235294);
+}
+
+.history-of-cct,
+.leadership {
+  width: 12rem;
+  font-size: 0.9rem;
+  background: #e8f2ff;
+  padding: 0.8rem 1rem 0.8rem 1rem;
+  box-shadow: 1px 1px 2px rgba(0, 0, 0, 0.2588235294);
+}
+
+.history-of-cct:hover,
+.statement:hover,
+.leadership:hover {
+  background: #c6deff;
+  color: #0e60bf !important;
+}
+
+.about-us-img,
+.history-img {
+  width: 100%;
+}
+
+.brief {
+  background: linear-gradient(rgba(14, 97, 191, 0.4117647059), rgba(14, 96, 191, 0.4117647059)), url(../images/about-1.png);
+}
+
+.brief-heading {
+  font-size: 0.9rem;
+}
+
+.statement-section {
+  background: linear-gradient(rgba(5, 47, 97, 0.7490196078), rgba(5, 47, 97, 0.7490196078)), url(../images/chapel-history.jpg);
+}
+
+.bible,
+.God,
+.Jesus,
+.holy-spirit,
+.man-sin,
+.salvation,
+.church,
+.end-times {
+  background: #fff;
+  border-radius: 1rem;
+}
+
+.robert-profile,
+.kyle-profile,
+.jaakko-profile,
+.olli-profile {
+  border: 2px solid #c6deff;
+  border-radius: 0.5rem;
+  box-shadow: rgba(0, 0, 0, 0.0588235294) 0px 8px 16px 0px;
+}
+
+.profile-img {
+  width: 100%;
+}
+
+.name {
+  font-size: 0.9rem;
+}
+
+.title {
+  background: #c6deff;
+  font-size: 0.8rem;
+}
+
+.mail {
+  font-size: 0.8rem;
+}
+
+.about-badge {
+  background: rgba(0, 0, 0, 0.6);
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  background: #0b2645;
+}
+
+.footer-container {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 320px) {
+  .header {
+    height: 4rem;
+    box-shadow: 0 0 1px #000;
+  }
+  .x-mark {
+    left: 11rem;
+  }
+}
+@media screen and (min-width: 375px) {
+  .x-mark {
+    left: 13.5rem;
+  }
+  .about-us-img,
+  .history-img {
+    width: 90%;
+  }
+  .name {
+    font-size: 0.9rem;
+  }
+  .mail {
+    font-size: 0.9rem;
+  }
+}
+@media screen and (min-width: 475px) {
+  .x-mark {
+    left: 18rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  .nav-menu {
+    width: 20rem;
+  }
+  .x-mark {
+    left: 17rem;
+  }
+  .ministry-img {
+    width: 50%;
+  }
+  .about-us-img,
+  .history-img {
+    width: 80%;
+  }
+  .name {
+    font-size: 1.5rem;
+  }
+  .title {
+    font-size: 1rem;
+  }
+  .mail {
+    font-size: 1rem;
+  }
+}
+@media screen and (min-width: 768px) {
+  .profile-img {
+    width: 30%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .header {
+    height: 5rem;
+  }
+  .church-name {
+    font-size: 0.9rem;
+  }
+  .nav-menu {
+    position: static;
+    width: auto;
+    height: 100%;
+    transform: none;
+    right: 0rem;
+    top: 1rem;
+    background: rgba(0, 0, 0, 0);
+  }
+  .nav-svg {
+    margin: 0rem 0.3rem 0rem 0rem;
+    position: relative;
+    bottom: 0.1rem;
+  }
+  .nav-items {
+    font-size: 0.9rem;
+    position: relative;
+    padding: 0.5rem;
+  }
+  .nav-items:hover {
+    background: #c6deff;
+    padding: 7px;
+    border-radius: 0.3rem;
+    border: 1px solid #c6deff;
+  }
+  .caret {
+    transition: all 0.1s ease-in-out;
+  }
+  .nav-items:hover .caret {
+    transform: rotateZ(90deg);
+  }
+  .item-dropdown {
+    position: absolute;
+    top: 2.3rem;
+    left: 0rem;
+    width: 13rem;
+    height: 0rem;
+    border-radius: 1rem;
+    background: #e8f2ff;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  .about-hero {
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(rgba(14, 97, 191, 0.4549019608), rgba(14, 97, 191, 0.4549019608)), url(../images/about.png) fixed;
+    background-position: top;
+    background-size: auto;
+  }
+  .about-hero-text {
+    font-size: 2.5rem;
+  }
+  .about-us-img,
+  .history-img {
+    width: 50%;
+  }
+  .footer-container {
+    display: grid !important;
+    grid-template-columns: 0.6fr 1fr 1fr 0.65fr 0.4fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+  }
+  .footer-logo,
+  .address,
+  .footer-contact,
+  .copyright {
+    font-size: 0.85rem;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+  }
+  .copyright {
+    grid-area: 1/2/2/3;
+  }
+  .copyright {
+    order: 2 !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .about-hero-text {
+    font-size: 3rem;
+  }
+  .footer-logo,
+  .address,
+  .footer-contact,
+  .copyright {
+    font-size: 1rem;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+  }
+}
+@media screen and (min-height: 800px) {
+  .about-hero {
+    height: 320px;
+  }
+}
+.showDropdown {
+  height: auto;
+}
+
+.hidden {
+  display: none !important;
+}
+
+.active {
+  background: #0e60bf;
+  color: #fff !important;
+}
+
+.nav-hover-color {
+  color: #0e60bf !important;
+}
+
+.min-nav-color {
+  color: #fff !important;
+}

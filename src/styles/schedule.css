@@ -1,0 +1,297 @@
+/** @format */
+@import url("https://fonts.googleapis.com/css2?family=Manrope:wght@200;300;500;600;700;800&display=swap");
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  margin: 0px;
+  padding: 0px;
+  border: 0px;
+  list-style: none;
+  text-decoration: none;
+  background: none;
+  box-sizing: border-box;
+  font-family: "Manrope", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+  position: relative;
+  padding: 0rem 0rem 0rem 0rem;
+}
+
+.header {
+  height: 3rem;
+  box-shadow: 0 0 1px #000;
+}
+
+.hamburger {
+  font-size: 1.3rem;
+}
+
+.nav-menu {
+  position: absolute;
+  top: 0rem;
+  left: 0rem;
+  width: 70%;
+  height: 100vh;
+  background: #e8f2ff;
+  transform: translateX(-100%);
+  transition: all 0.2s ease-in-out;
+}
+
+.nav-items {
+  padding: 0.3rem;
+}
+
+.nav-svg {
+  margin: 0rem 1rem 0rem 0rem;
+  position: relative;
+  bottom: 0.1rem;
+}
+
+.x-mark {
+  left: 9.5rem;
+  top: 1rem;
+  font-size: 1.3rem;
+}
+
+.schedule-hero {
+  width: 100%;
+  height: 30vh;
+  position: relative;
+}
+
+.schedule-hero-img {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+
+.overlay {
+  position: absolute;
+  top: 0rem;
+  width: 100%;
+  height: 100%;
+  background: rgba(5, 47, 97, 0.7490196078);
+}
+
+.schedule-hero-container {
+  width: 100%;
+  height: 100%;
+  position: relative;
+  z-index: 1;
+}
+
+.schedule-hero-text {
+  font-weight: 900 !important;
+  color: black;
+}
+
+.schedule-container {
+  border: 2px solid #c6deff;
+  border-radius: 1rem;
+  box-shadow: rgba(0, 0, 0, 0.0588235294) 0px 8px 16px 0px;
+}
+
+.calendar {
+  border-bottom: 1px solid #c6deff;
+}
+
+.schedule-type {
+  border-bottom: 1px solid #000;
+}
+
+.left-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #c6deff;
+  margin: 0rem 1rem 0rem 0rem;
+}
+
+.right-button {
+  width: 2.5rem;
+  height: 2.5rem;
+  border-radius: 50%;
+  background: #c6deff;
+  margin: 0rem 0rem 0rem 1rem;
+}
+
+.upcoming:hover,
+.concluded:hover {
+  background: #c6deff;
+  cursor: default;
+}
+
+.footer {
+  width: 100%;
+  height: auto;
+  background: #0b2645;
+}
+
+.footer-container {
+  width: 100%;
+  height: auto;
+}
+
+@media screen and (min-width: 320px) {
+  .header {
+    height: 4rem;
+    box-shadow: 0 0 1px #000;
+  }
+  .x-mark {
+    left: 11rem;
+  }
+}
+@media screen and (min-width: 375px) {
+  .x-mark {
+    left: 13.5rem;
+  }
+}
+@media screen and (min-width: 475px) {
+  .x-mark {
+    left: 18rem;
+  }
+}
+@media screen and (min-width: 576px) {
+  .nav-menu {
+    width: 20rem;
+  }
+  .x-mark {
+    left: 17rem;
+  }
+  .ministry-img {
+    width: 50%;
+  }
+  .upcoming,
+  .concluded {
+    height: 4rem;
+  }
+  .upcoming br,
+  .concluded br {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .schedule-container {
+    width: 80%;
+  }
+}
+@media screen and (min-width: 900px) {
+  .header {
+    height: 5rem;
+  }
+  .church-name {
+    font-size: 0.9rem;
+  }
+  .nav-menu {
+    position: static;
+    width: auto;
+    height: 100%;
+    transform: none;
+    right: 0rem;
+    top: 1rem;
+    background: rgba(0, 0, 0, 0);
+  }
+  .nav-svg {
+    margin: 0rem 0.3rem 0rem 0rem;
+    position: relative;
+    bottom: 0.1rem;
+  }
+  .nav-items {
+    font-size: 0.9rem;
+    position: relative;
+    padding: 0.5rem;
+  }
+  .nav-items:hover {
+    background: #c6deff;
+    padding: 7px;
+    border-radius: 0.3rem;
+    border: 1px solid #c6deff;
+  }
+  .caret {
+    transition: all 0.1s ease-in-out;
+  }
+  .nav-items:hover .caret {
+    transform: rotateZ(90deg);
+  }
+  .item-dropdown {
+    position: absolute;
+    top: 2.3rem;
+    left: 0rem;
+    width: 13rem;
+    height: 0rem;
+    border-radius: 1rem;
+    background: #e8f2ff;
+    overflow: hidden;
+    transition: all 0.5s ease-in-out;
+  }
+  .schedule-hero {
+    width: 100%;
+    height: 40vh;
+    background: linear-gradient(rgba(14, 97, 191, 0.4549019608), rgba(14, 97, 191, 0.4549019608)), url(../images/home.png) fixed;
+    background-position: top;
+    background-size: auto;
+  }
+  .schedule-hero-text {
+    font-size: 2.5rem;
+  }
+  .ministry-header {
+    font-size: 1.5rem;
+  }
+  .schedule-container {
+    width: 70%;
+  }
+  .footer-container {
+    display: grid !important;
+    grid-template-columns: 0.6fr 1fr 1fr 0.65fr 0.4fr;
+    grid-template-rows: auto;
+    justify-items: center;
+    align-items: center;
+  }
+  .footer-logo,
+  .address,
+  .footer-contact,
+  .copyright {
+    font-size: 0.85rem;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+  }
+  .copyright {
+    grid-area: 1/2/2/3;
+  }
+  .copyright {
+    order: 2 !important;
+  }
+}
+@media screen and (min-width: 1024px) {
+  .schedule-hero-text {
+    font-size: 3rem;
+  }
+  .schedule-container {
+    width: 60%;
+  }
+  .footer-logo,
+  .address,
+  .footer-contact,
+  .copyright {
+    font-size: 1rem;
+    margin: 0rem 0.5rem 0rem 0.5rem;
+  }
+}
+@media screen and (min-height: 800px) {
+  .schedule-hero {
+    height: 320px;
+  }
+}
+.showDropdown {
+  height: auto;
+}
+
+.nav-hover-color {
+  color: #0e60bf !important;
+}
