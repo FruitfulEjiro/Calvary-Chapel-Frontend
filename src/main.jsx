@@ -3,7 +3,7 @@ import { createRoot } from "react-dom/client";
 
 
 // Local Modules
-import App from "./app.jsx";
+import App from "./App.jsx";
 
 // Styles
 import "./styles/bootstrap.css";
