@@ -299,7 +299,6 @@ body {
     border-radius: 1rem;
     background: #e8f2ff;
     overflow: hidden;
-    transition: all 0.5s ease-in-out;
   }
   .about-hero {
     width: 100%;

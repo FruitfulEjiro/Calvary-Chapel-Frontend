@@ -1,4 +1,5 @@
 import React from "react";
+import { Outlet, Link } from "react-router-dom";
 
 // Components
 import Navigation from "../components/Navigation.jsx";
@@ -42,60 +43,62 @@ const Resources = () => {
             <section className="resources-nav py-3">
                <div className="resources-nav-container container overflow-auto">
                   <div className="nav-container d-flex flex-row gap-5 py-3">
-                     <a to="/resources?resources=Verse" className="color text-primary">
+                     <Link to="/resources/verse" className="color text-primary">
                         <div className="verse-by-verse text-center rounded-pill text-primary fw-bold">
                            <img src={verse} alt="" className="me-2" />
                            Verse by Verse
                         </div>
-                     </a>
+                     </Link>
 
-                     <a to="/resources?resources=Wednesday-Services" className="color text-primary">
+                     <Link to="/resources/wednesday-services" className="color text-primary">
                         <div className="wednesday-services text-center rounded-pill text-primary fw-bold">
                            <img src={wednesday} alt="" className="me-2" />
                            Wednesday Services
                         </div>
-                     </a>
+                     </Link>
 
-                     <a to="/resources?resources=Sunday-Services" className="color text-primary">
+                     <Link to="/resources/sunday-services" className="color text-primary">
                         <div className="sunday-services text-center rounded-pill text-primary fw-bold">
                            <img src={sunday} alt="" className="me-2" />
                            Sunday Services
                         </div>
-                     </a>
+                     </Link>
 
-                     <a to="/resources?resources=Guest-Speakers" className="color text-primary">
+                     <Link to="/resources/guest-speakers" className="color text-primary">
                         <div className="guest-speakers text-center rounded-pill text-primary fw-bold">
                            <img src={guestspeaker} alt="" className="me-2" />
                            Guest Speakers
                         </div>
-                     </a>
+                     </Link>
 
-                     <a to="/resources?resources=Character-Studies" className="color text-primary">
+                     <Link to="/resources/character-studies" className="color text-primary">
                         <div className="character-studies text-center rounded-pill text-primary fw-bold">
                            <img src={character} alt="" className="me-2" />
                            Character Studies
                         </div>
-                     </a>
+                     </Link>
 
-                     <a to="/resources?resources=Topical-Studies" className="color text-primary">
+                     <Link to="/resources/topical-studies" className="color text-primary">
                         <div className="topical-studies text-center rounded-pill text-primary fw-bold">
                            <img src={topical} alt="" className="me-2" />
                            Topical Studies
                         </div>
-                     </a>
+                     </Link>
 
-                     <a to="/resources?resources=Conferences" className="color text-primary">
+                     <Link to="/resources/conferences" className="color text-primary">
                         <div className="conferences text-center rounded-pill text-primary fw-bold">
                            <img src={conferences} alt="" className="me-2" />
                            Conferences
                         </div>
-                     </a>
+                     </Link>
                   </div>
                </div>
             </section>
 
             <section className="resources container">
-               <div className="resources-container d-flex flex-column flex-md-row align-items-center align-items-start justify-content-center gap-3 py-3"></div>
+               <div className="resources-container d-flex flex-column flex-md-column align-items-center align-items-start justify-content-center gap-3 py-3">
+                  <Outlet />
+               </div>
             </section>
          </main>
          <Footer />

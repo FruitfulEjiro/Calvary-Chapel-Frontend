@@ -1,4 +1,4 @@
-import React, { useRef } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 
 // Icons
@@ -26,7 +26,10 @@ import leadership from "../assets/svg/leadership.svg";
 import contact from "../assets/svg/contact.svg";
 
 const Navigation = () => {
-   const navRef = useRef();
+   const navRef = useRef(null);
+   const ministryRef = useRef(null);
+   const resourcesRef = useRef(null);
+   const aboutRef = useRef(null);
 
    const showNavbar = () => {
       navRef.current.style.transform = "translateX(0%)";
@@ -34,12 +37,26 @@ const Navigation = () => {
    const hideNavbar = () => {
       navRef.current.style.transform = "translateX(-100%)";
    };
-   const showDropDown = () => {
-      navRef.current.style.height = "16rem";
+   const ministryDropDown = () => {
+      ministryRef.current.style.height = "13rem";
    };
-   const hideDropDown = () => {
-      navRef.current.style.height = "0rem";
+   const hideMinistryDropDown = () => {
+      ministryRef.current.style.height = "0rem";
    };
+   const resourcesDropDown = () => {
+      resourcesRef.current.style.height = "19rem";
+   };
+   const hideResourcesDropDown = () => {
+      resourcesRef.current.style.height = "0rem";
+   };
+   const aboutDropDown = () => {
+      aboutRef.current.style.height = "10rem";
+   };
+   const hideAboutDropDown = () => {
+      aboutRef.current.style.height = "0rem";
+   };
+
+   const [height, setHeight] = useState();
 
    return (
       <>
@@ -64,46 +81,50 @@ const Navigation = () => {
                   </li>
                   <li
                      className="nav-items ministry mx-2 mx-lg-2 my-3 d-flex flex-row align-items-center justify-content-cnter"
-                     onMouseOver={() => showDropDown()}
-                     onMouseOut={() => hideDropDown()}
+                     onMouseOver={() => ministryDropDown()}
+                     onMouseOut={() => hideMinistryDropDown()}
                   >
                      <Link to="/ministry" className="item item1">
                         <img src={ministry} alt="" className="mb-1 me-1" />
                         Ministry<i className="fa-solid fa-caret-right caret ms-1 d-none d-lg-inline-block"></i>
                      </Link>
-                     <ul ref={navRef} className="item-dropdown ministry-dropdown d-none d-lg-block m-0 p-0 ps-3">
+                     <ul ref={ministryRef} className="item-dropdown ministry-dropdown d-none d-lg-block m-0 p-0 ps-3">
                         <li className="sub-items my-lg-4">
-                           <Link to="/ministry?ministry=men">
+                           <Link to="/ministry/men-ministry">
                               <img src={men} alt="" className="mb-1 me-1" />
                               Men's Ministry
                            </Link>
                         </li>
                         <li className="sub-items my-lg-4">
-                           <Link to="/ministry?ministry=women">
+                           <Link to="/ministry/women-ministry">
                               <img src={women} alt="" className="mb-1 me-1" />
                               Women's Ministry
                            </Link>
                         </li>
                         <li className="sub-items my-lg-4">
-                           <Link to="/ministry?ministry=youth">
+                           <Link to="/ministry/youth-ministry">
                               <img src={youth} alt="" className="mb-1 me-1" />
                               Youth's Ministry
                            </Link>
                         </li>
                         <li className="sub-items my-lg-4">
-                           <Link to="/ministry?ministry=children">
+                           <Link to="/ministry/children-ministry">
                               <img src={children} alt="" className="mb-1 me-1" />
                               Children's Ministry
                            </Link>
                         </li>
                      </ul>
                   </li>
-                  <li className="nav-items resources mx-2 mx-lg-2 my-3 d-flex flex-row align-items-center justify-content-cnter">
+                  <li
+                     className="nav-items resources mx-2 mx-lg-2 my-3 d-flex flex-row align-items-center justify-content-cnter"
+                     onMouseOver={() => resourcesDropDown()}
+                     onMouseOut={() => hideResourcesDropDown()}
+                  >
                      <Link to="/resources" className="item item2">
                         <img src={resources} alt="" className="mb-1 me-1" />
                         Resources<i className="fa-solid fa-caret-right caret ms-1 d-none d-lg-inline-block"></i>
                      </Link>
-                     <ul className="item-dropdown resources-dropdown d-none d-lg-block m-0 p-0 ps-3">
+                     <ul ref={resourcesRef} className="item-dropdown resources-dropdown d-none d-lg-block m-0 p-0 ps-3">
                         <li className="sub-items my-lg-4">
                            <Link to="/resources?resources=Verse">
                               <img src={verse} alt="" className="mb-1 me-1" />
@@ -154,12 +175,16 @@ const Navigation = () => {
                         Schedule
                      </Link>
                   </li>
-                  <li className="nav-items about mx-2 mx-lg-2 my-3 d-flex flex-row align-items-center justify-content-cnter">
+                  <li
+                     className="nav-items about mx-2 mx-lg-2 my-3 d-flex flex-row align-items-center justify-content-cnter"
+                     onMouseOver={() => aboutDropDown()}
+                     onMouseOut={() => hideAboutDropDown()}
+                  >
                      <Link to="/about" className="item item4">
                         <img src={about} alt="" className="mb-1 me-1" />
                         About<i className="fa-solid fa-caret-right caret ms-1 d-none d-lg-inline-block"></i>
                      </Link>
-                     <ul className="item-dropdown about-dropdown d-none d-lg-block m-0 p-0 ps-3">
+                     <ul ref={aboutRef} className="item-dropdown about-dropdown d-none d-lg-block m-0 p-0 ps-3">
                         <li className="sub-items my-lg-4">
                            <Link to="/about?view=about">
                               <img src={history} alt="" className="mb-1 me-1" />

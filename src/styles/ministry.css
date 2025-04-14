@@ -128,6 +128,8 @@ body {
 
 .ministry-img {
   width: 80%;
+  object-fit: cover;
+  object-position: center;
 }
 
 .text {
@@ -225,7 +227,6 @@ body {
     border-radius: 1rem;
     background: #e8f2ff;
     overflow: hidden;
-    transition: all 0.5s ease-in-out;
   }
   .ministry-hero {
     width: 100%;
@@ -239,6 +240,10 @@ body {
   }
   .ministry-header {
     font-size: 1.5rem;
+  }
+  .ministry-img {
+    width: 20rem !important;
+    height: 25rem;
   }
   .footer-container {
     display: grid !important;
@@ -271,6 +276,12 @@ body {
   .copyright {
     font-size: 1rem;
     margin: 0rem 0.5rem 0rem 0.5rem;
+  }
+}
+@media screen and (min-width: 1200px) {
+  .ministry-img {
+    width: 30rem !important;
+    height: 30rem;
   }
 }
 @media screen and (min-height: 800px) {
