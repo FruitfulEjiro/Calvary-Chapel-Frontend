@@ -29,6 +29,7 @@ const router = createBrowserRouter([
       path: "/ministry",
       element: <Ministry />,
       children: [
+         { index: true, element: <MenMinistry /> },
          { path: "men-ministry", element: <MenMinistry /> },
          { path: "women-ministry", element: <WomenMinistry /> },
          { path: "youth-ministry", element: <YouthMinistry /> },
