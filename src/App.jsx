@@ -40,6 +40,7 @@ const router = createBrowserRouter([
       path: "/resources",
       element: <Resources />,
       children: [
+         { index: true, element: <Verse /> },
          { path: "verse", element: <Verse /> },
          { path: "wednesday-services", element: <DummyText /> },
          { path: "sunday-services", element: <DummyText /> },
@@ -54,6 +55,7 @@ const router = createBrowserRouter([
       path: "/about",
       element: <About />,
       children: [
+         { index: true, element: <History /> },
          { path: "history", element: <History /> },
          { path: "statement-of-faith", element: <Statement /> },
          { path: "leadership", element: <Leadership /> },
